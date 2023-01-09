@@ -7,4 +7,4 @@
 ## Használat
 ### Példa projekt:
 1. Navigáljon a `test/testproject/` mappába
-2. Adja ki a következő parancsot: `node --import ../../index.js index.js`
+2. Adja ki a következő parancsot: `node --require ../../tracer.js index.js`

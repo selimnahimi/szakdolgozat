@@ -2,7 +2,7 @@
   "name": "szakdolgozat",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "tracer.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,6 +11,5 @@
   "license": "ISC",
   "dependencies": {
     "extend": "^3.0.2"
-  },
-  "type": "module"
+  }
 }
