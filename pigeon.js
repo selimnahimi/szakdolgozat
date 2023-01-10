@@ -2,8 +2,9 @@ const EventEmitter = require('events').EventEmitter;
 const Logger = require('./lib/logger').Logger;
 const Module = require('module');
 const Code = require("./lib/code").Code;
+const Instrument = require("./lib/instrument").Instrument;
 
-class Tracer extends EventEmitter {
+class Pigeon extends EventEmitter {
     version = 'pre-0.0.1';
     logger = new Logger(process.stdout, process.stdout.write);
 
@@ -45,4 +46,4 @@ class Tracer extends EventEmitter {
     }
 }
 
-exports.default = new Tracer();
+exports.default = new Pigeon();
