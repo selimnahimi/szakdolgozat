@@ -25,14 +25,15 @@ class Pigeon extends EventEmitter {
 
         Module.prototype._compile = function(content, filename) {
             // Beágyazás
-            content = Code.wrap(content);
+            let code = new Code(content);
+            code.wrap();
 
-            console.log(content);
+            console.log(code.source);
 
             // TODO: Instrumentálás
 
             // Megágyazás
-            content = Code.unwrap(content);
+            code.unwrap();
 
             original.call(this, content, filename);
         }
