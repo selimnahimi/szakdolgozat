@@ -1,6 +1,7 @@
 const EventEmitter = require('events').EventEmitter;
 const Logger = require('./lib/logger').Logger;
 const Module = require('module');
+const Code = require("./lib/code").Code;
 
 class Tracer extends EventEmitter {
     version = 'pre-0.0.1';
@@ -18,10 +19,21 @@ class Tracer extends EventEmitter {
     }
 
     alterCompile() {
+        let tracer = this;
+        let original = Module.prototype._compile;
+
         Module.prototype._compile = function(content, filename) {
-            content = Module.wrapper[0] + '\n' + content + Module.wrapper[1];
+            // Beágyazás
+            content = Code.wrap(content);
 
             console.log(content);
+
+            // TODO: Instrumentálás
+
+            // Megágyazás
+            content = Code.unwrap(content);
+
+            original.call(this, content, filename);
         }
     }
 
