@@ -3,6 +3,7 @@
 
 ## Előkészületek
 - Telepítse a következő szoftvert: NodeJS v19.4.0
+- Adja ki az `npm install` parancsot a projekt mappájában
 
 ## Használat
 ### Példa projekt:
