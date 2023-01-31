@@ -31,10 +31,7 @@ class Pigeon extends EventEmitter {
             let code = new Code(content);
             code.wrap();
 
-            console.log(code.source);
-
             // TODO: Instrumentálás
-            console.log(Instrument.inject(filename, code));
             code.source = Instrument.inject(filename, code);
 
             // Megágyazás
