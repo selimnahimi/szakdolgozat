@@ -4,7 +4,8 @@
   "description": "",
   "main": "pigeon.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate-docs": "jsdoc --configure jsdoc.json --verbose"
   },
   "keywords": [],
   "author": "",
@@ -13,5 +14,9 @@
     "espree": "^9.4.1",
     "extend": "^3.0.2",
     "idgen": "^2.1.0"
+  },
+  "devDependencies": {
+    "clean-jsdoc-theme": "^4.2.3",
+    "jsdoc": "^4.0.0"
   }
 }
