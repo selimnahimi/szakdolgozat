@@ -1,12 +1,15 @@
 const EventEmitter = require('events').EventEmitter;
 const Module = require('module');
-const Instrument = require("./lib/instrument");
+const Instrument = require('./lib/instrument');
+const GlobalFunctions = require('./lib/global_functions');
 const Logger = require('./lib/logger');
-const Code = require("./lib/code");
+const Tracer = require('./lib/tracer');
+const Code = require('./lib/code');
 
 class Pigeon extends EventEmitter {
     version = 'pre-0.0.1';
     logger = new Logger(process.stdout, process.stdout.write);
+    tracer = new Tracer();
 
     constructor() {
         super();
@@ -17,10 +20,10 @@ class Pigeon extends EventEmitter {
         this.log(`-- pigeon ${this.version} --`);
         this.log('compile felülírása');
         this.alterCompile();
+        this.setupGlobalFunctions();
     }
 
     alterCompile() {
-        let tracer = this;
         let original = Module.prototype._compile;
 
         Module.prototype._compile = function(content, filename) {
@@ -32,12 +35,17 @@ class Pigeon extends EventEmitter {
 
             // TODO: Instrumentálás
             console.log(Instrument.inject(filename, code));
+            code.source = Instrument.inject(filename, code);
 
             // Megágyazás
             code.unwrap();
 
-            original.call(this, content, filename);
+            original.call(this, code.source, filename);
         }
+    }
+
+    setupGlobalFunctions() {
+        GlobalFunctions.setup(this);
     }
 
     log() {

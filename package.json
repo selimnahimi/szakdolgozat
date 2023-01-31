@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "espree": "^9.4.1",
-    "extend": "^3.0.2"
+    "extend": "^3.0.2",
+    "idgen": "^2.1.0"
   }
 }
