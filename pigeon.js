@@ -6,9 +6,27 @@ const Logger = require('./lib/logger');
 const Tracer = require('./lib/tracer');
 const Code = require('./lib/code');
 
+/**
+ * Az osztály, ami a folyamat elindításáért felelős
+ * @extends EventEmitter
+ */
 class Pigeon extends EventEmitter {
+    /**
+     * Verzió azonosító
+     * @type {string}
+     */
     version = 'pre-0.0.1';
+
+    /**
+     * Logolásért felelős osztály
+     * @type {Logger}
+     */
     logger = new Logger(process.stdout, process.stdout.write);
+
+    /**
+     * Követő metódusokért felelős osztály
+     * @type {Tracer}
+     */
     tracer = new Tracer();
 
     constructor() {
@@ -16,6 +34,9 @@ class Pigeon extends EventEmitter {
         this.inject();
     }
 
+    /**
+     * Forráskód injektálás végrehajtása
+     */
     inject() {
         this.log(`-- pigeon ${this.version} --`);
         this.log('compile felülírása');
@@ -23,6 +44,9 @@ class Pigeon extends EventEmitter {
         this.setupGlobalFunctions();
     }
 
+    /**
+     * Fordítás felülírása instrumentálás segítségével
+     */
     alterCompile() {
         let original = Module.prototype._compile;
 
@@ -41,10 +65,16 @@ class Pigeon extends EventEmitter {
         }
     }
 
+    /**
+     * Globális függvények beállítása
+     */
     setupGlobalFunctions() {
         GlobalFunctions.setup(this);
     }
 
+    /**
+     * Logolást végző metódus
+     */
     log() {
         if (!this.logger) return;
 
