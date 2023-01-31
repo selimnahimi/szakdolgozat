@@ -12,3 +12,6 @@
 ## Használat
 ### Példa projekt:
 - Adja ki a következő parancsot: `node --require ./pigeon.js ./test/testproject/index.js`
+
+## Dokumentáció generálása
+- Adja ki a következő parancsot: `npm run generate-docs *`
