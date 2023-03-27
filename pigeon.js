@@ -5,6 +5,7 @@ const GlobalFunctions = require('./lib/global_functions');
 const Logger = require('./lib/logger');
 const Tracer = require('./lib/tracer');
 const Code = require('./lib/code');
+const Graphviz = require('graphviz');
 
 /**
  * Az osztály, ami a folyamat elindításáért felelős
@@ -38,6 +39,16 @@ class Pigeon extends EventEmitter {
      * Forráskód injektálás végrehajtása
      */
     inject() {
+        let g = Graphviz.digraph("G");
+        let n1 = g.addNode( "Hello", {"color" : "blue"} );
+        n1.set( "style", "filled" );
+        g.addNode( "World" );
+
+        let e = g.addEdge( n1, "World" );
+        e.set( "color", "red" );
+
+        g.output( "png", "test01.png" );
+
         this.log(`-- pigeon ${this.version} --`);
         this.log('compile felülírása');
         this.alterCompile();
