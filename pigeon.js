@@ -6,7 +6,6 @@ const Visualizer = require('./lib/visualizer/visualizer');
 const Logger = require('./lib/logger');
 const Tracer = require('./lib/tracer');
 const Code = require('./lib/code');
-const Graphviz = require('graphviz');
 
 /**
  * Az osztály, ami a folyamat elindításáért felelős

@@ -13,8 +13,8 @@
   "dependencies": {
     "espree": "^9.4.1",
     "extend": "^3.0.2",
-    "graphviz": "^0.0.9",
-    "idgen": "^2.1.0"
+    "idgen": "^2.1.0",
+    "ts-graphviz": "^1.5.5"
   },
   "devDependencies": {
     "clean-jsdoc-theme": "^4.2.3",

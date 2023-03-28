@@ -17,6 +17,9 @@ function testFn(number1, number2) {
 }
 
 function addNumbers(args) {
+    emptyFunction();
+    emptyFunction();
+    emptyFunction();
     return (args => {return args.number1 + args.number2})(args);
 }
 
