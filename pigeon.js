@@ -42,8 +42,6 @@ class Pigeon extends EventEmitter {
      * Forráskód injektálás végrehajtása
      */
     inject() {
-        this.visualizer.visualize();
-
         this.log(`-- pigeon ${this.version} --`);
         this.log('compile felülírása');
         this.alterCompile();

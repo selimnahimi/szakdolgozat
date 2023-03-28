@@ -9,6 +9,7 @@ console.log(result2);
 console.log(result3);
 
 function testFn(number1, number2) {
+    emptyFunction();
     return addNumbers({
         number1: number1,
         number2: number2
@@ -17,4 +18,8 @@ function testFn(number1, number2) {
 
 function addNumbers(args) {
     return (args => {return args.number1 + args.number2})(args);
+}
+
+function emptyFunction() {
+
 }
