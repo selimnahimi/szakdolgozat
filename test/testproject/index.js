@@ -1,3 +1,5 @@
+const lib = require('./lib');
+
 console.log("Hello World!");
 let number1 = 5;
 let number2 = 10;
@@ -10,6 +12,7 @@ console.log(result3);
 
 function testFn(number1, number2) {
     emptyFunction();
+    lib.libFunction();
     return addNumbers({
         number1: number1,
         number2: number2
