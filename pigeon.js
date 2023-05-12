@@ -2,6 +2,7 @@ const EventEmitter = require('events').EventEmitter;
 const Module = require('module');
 const Instrument = require('./lib/instrument');
 const GlobalFunctions = require('./lib/global_functions');
+const Visualizer = require('./lib/visualizer/visualizer');
 const Logger = require('./lib/logger');
 const Tracer = require('./lib/tracer');
 const Code = require('./lib/code');
@@ -27,7 +28,9 @@ class Pigeon extends EventEmitter {
      * Követő metódusokért felelős osztály
      * @type {Tracer}
      */
-    tracer = new Tracer();
+    tracer = new Tracer(this);
+    instrument = new Instrument(this);
+    visualizer = new Visualizer(this);
 
     constructor() {
         super();
@@ -48,6 +51,7 @@ class Pigeon extends EventEmitter {
      * Fordítás felülírása instrumentálás segítségével
      */
     alterCompile() {
+        let self = this;
         let original = Module.prototype._compile;
 
         Module.prototype._compile = function(content, filename) {
@@ -56,11 +60,12 @@ class Pigeon extends EventEmitter {
             code.wrap();
 
             // TODO: Instrumentálás
-            code.source = Instrument.inject(filename, code);
+            code.source = self.instrument.inject(filename, code);
 
             // Megágyazás
             code.unwrap();
 
+            // Eredeti működés megtartása
             original.call(this, code.source, filename);
         }
     }
