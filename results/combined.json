@@ -1,0 +1,263 @@
+{
+    "functions": {
+        "[Unknown]@test/testproject/index.js::0": {
+            "VariableDeclaration@test/testproject/index.js::1": {
+                "funcId": "[Unknown]@test/testproject/index.js::0",
+                "statementId": "VariableDeclaration@test/testproject/index.js::1",
+                "type": "VariableDeclaration",
+                "depth": 0,
+                "line": 1,
+                "col": 0,
+                "lineEnd": 1,
+                "colEnd": 29,
+                "executed": true
+            },
+            "ExpressionStatement@test/testproject/index.js::3": {
+                "funcId": "[Unknown]@test/testproject/index.js::0",
+                "statementId": "ExpressionStatement@test/testproject/index.js::3",
+                "type": "ExpressionStatement",
+                "depth": 0,
+                "line": 3,
+                "col": 0,
+                "lineEnd": 3,
+                "colEnd": 28,
+                "executed": true
+            },
+            "VariableDeclaration@test/testproject/index.js::4": {
+                "funcId": "[Unknown]@test/testproject/index.js::0",
+                "statementId": "VariableDeclaration@test/testproject/index.js::4",
+                "type": "VariableDeclaration",
+                "depth": 0,
+                "line": 4,
+                "col": 0,
+                "lineEnd": 4,
+                "colEnd": 16,
+                "executed": true
+            },
+            "VariableDeclaration@test/testproject/index.js::5": {
+                "funcId": "[Unknown]@test/testproject/index.js::0",
+                "statementId": "VariableDeclaration@test/testproject/index.js::5",
+                "type": "VariableDeclaration",
+                "depth": 0,
+                "line": 5,
+                "col": 0,
+                "lineEnd": 5,
+                "colEnd": 17,
+                "executed": true
+            },
+            "VariableDeclaration@test/testproject/index.js::6": {
+                "funcId": "[Unknown]@test/testproject/index.js::0",
+                "statementId": "VariableDeclaration@test/testproject/index.js::6",
+                "type": "VariableDeclaration",
+                "depth": 0,
+                "line": 6,
+                "col": 0,
+                "lineEnd": 6,
+                "colEnd": 32,
+                "executed": true
+            },
+            "VariableDeclaration@test/testproject/index.js::7": {
+                "funcId": "[Unknown]@test/testproject/index.js::0",
+                "statementId": "VariableDeclaration@test/testproject/index.js::7",
+                "type": "VariableDeclaration",
+                "depth": 0,
+                "line": 7,
+                "col": 0,
+                "lineEnd": 7,
+                "colEnd": 39,
+                "executed": true
+            },
+            "VariableDeclaration@test/testproject/index.js::8": {
+                "funcId": "[Unknown]@test/testproject/index.js::0",
+                "statementId": "VariableDeclaration@test/testproject/index.js::8",
+                "type": "VariableDeclaration",
+                "depth": 0,
+                "line": 8,
+                "col": 0,
+                "lineEnd": 8,
+                "colEnd": 45,
+                "executed": true
+            },
+            "ExpressionStatement@test/testproject/index.js::9": {
+                "funcId": "[Unknown]@test/testproject/index.js::0",
+                "statementId": "ExpressionStatement@test/testproject/index.js::9",
+                "type": "ExpressionStatement",
+                "depth": 0,
+                "line": 9,
+                "col": 0,
+                "lineEnd": 9,
+                "colEnd": 21,
+                "executed": true
+            },
+            "ExpressionStatement@test/testproject/index.js::10": {
+                "funcId": "[Unknown]@test/testproject/index.js::0",
+                "statementId": "ExpressionStatement@test/testproject/index.js::10",
+                "type": "ExpressionStatement",
+                "depth": 0,
+                "line": 10,
+                "col": 0,
+                "lineEnd": 10,
+                "colEnd": 21,
+                "executed": true
+            },
+            "ExpressionStatement@test/testproject/index.js::11": {
+                "funcId": "[Unknown]@test/testproject/index.js::0",
+                "statementId": "ExpressionStatement@test/testproject/index.js::11",
+                "type": "ExpressionStatement",
+                "depth": 0,
+                "line": 11,
+                "col": 0,
+                "lineEnd": 11,
+                "colEnd": 21,
+                "executed": true
+            }
+        },
+        "testFn@test/testproject/index.js::13": {
+            "ExpressionStatement@test/testproject/index.js::14": {
+                "funcId": "testFn@test/testproject/index.js::13",
+                "statementId": "ExpressionStatement@test/testproject/index.js::14",
+                "type": "ExpressionStatement",
+                "depth": 0,
+                "line": 14,
+                "col": 4,
+                "lineEnd": 14,
+                "colEnd": 20,
+                "executed": true
+            },
+            "ExpressionStatement@test/testproject/index.js::15": {
+                "funcId": "testFn@test/testproject/index.js::13",
+                "statementId": "ExpressionStatement@test/testproject/index.js::15",
+                "type": "ExpressionStatement",
+                "depth": 0,
+                "line": 15,
+                "col": 4,
+                "lineEnd": 15,
+                "colEnd": 22,
+                "executed": true
+            }
+        },
+        "addNumbers@test/testproject/index.js::22": {
+            "ExpressionStatement@test/testproject/index.js::23": {
+                "funcId": "addNumbers@test/testproject/index.js::22",
+                "statementId": "ExpressionStatement@test/testproject/index.js::23",
+                "type": "ExpressionStatement",
+                "depth": 0,
+                "line": 23,
+                "col": 4,
+                "lineEnd": 23,
+                "colEnd": 20,
+                "executed": true
+            },
+            "ExpressionStatement@test/testproject/index.js::24": {
+                "funcId": "addNumbers@test/testproject/index.js::22",
+                "statementId": "ExpressionStatement@test/testproject/index.js::24",
+                "type": "ExpressionStatement",
+                "depth": 0,
+                "line": 24,
+                "col": 4,
+                "lineEnd": 24,
+                "colEnd": 20,
+                "executed": true
+            },
+            "ExpressionStatement@test/testproject/index.js::25": {
+                "funcId": "addNumbers@test/testproject/index.js::22",
+                "statementId": "ExpressionStatement@test/testproject/index.js::25",
+                "type": "ExpressionStatement",
+                "depth": 0,
+                "line": 25,
+                "col": 4,
+                "lineEnd": 25,
+                "colEnd": 20,
+                "executed": true
+            }
+        },
+        "notCalledFunction@test/testproject/index.js::33": {
+            "ExpressionStatement@test/testproject/index.js::34": {
+                "funcId": "notCalledFunction@test/testproject/index.js::33",
+                "statementId": "ExpressionStatement@test/testproject/index.js::34",
+                "type": "ExpressionStatement",
+                "depth": 0,
+                "line": 34,
+                "col": 4,
+                "lineEnd": 34,
+                "colEnd": 42,
+                "executed": false
+            }
+        },
+        "[Unknown]@test/testproject/lib.js::0": {
+            "VariableDeclaration@test/testproject/lib.js::1": {
+                "funcId": "[Unknown]@test/testproject/lib.js::0",
+                "statementId": "VariableDeclaration@test/testproject/lib.js::1",
+                "type": "VariableDeclaration",
+                "depth": 0,
+                "line": 1,
+                "col": 0,
+                "lineEnd": 1,
+                "colEnd": 39,
+                "executed": true
+            },
+            "ExpressionStatement@test/testproject/lib.js::9": {
+                "funcId": "[Unknown]@test/testproject/lib.js::0",
+                "statementId": "ExpressionStatement@test/testproject/lib.js::9",
+                "type": "ExpressionStatement",
+                "depth": 0,
+                "line": 9,
+                "col": 0,
+                "lineEnd": 9,
+                "colEnd": 31,
+                "executed": true
+            }
+        },
+        "libFunction@test/testproject/lib.js::3": {
+            "ExpressionStatement@test/testproject/lib.js::4": {
+                "funcId": "libFunction@test/testproject/lib.js::3",
+                "statementId": "ExpressionStatement@test/testproject/lib.js::4",
+                "type": "ExpressionStatement",
+                "depth": 0,
+                "line": 4,
+                "col": 4,
+                "lineEnd": 4,
+                "colEnd": 37,
+                "executed": true
+            },
+            "ExpressionStatement@test/testproject/lib.js::6": {
+                "funcId": "libFunction@test/testproject/lib.js::3",
+                "statementId": "ExpressionStatement@test/testproject/lib.js::6",
+                "type": "ExpressionStatement",
+                "depth": 0,
+                "line": 6,
+                "col": 4,
+                "lineEnd": 6,
+                "colEnd": 28,
+                "executed": true
+            }
+        },
+        "libFunction2@test/testproject/otherlib.js::1": {
+            "ExpressionStatement@test/testproject/otherlib.js::2": {
+                "funcId": "libFunction2@test/testproject/otherlib.js::1",
+                "statementId": "ExpressionStatement@test/testproject/otherlib.js::2",
+                "type": "ExpressionStatement",
+                "depth": 0,
+                "line": 2,
+                "col": 4,
+                "lineEnd": 2,
+                "colEnd": 44,
+                "executed": true
+            }
+        },
+        "[Unknown]@test/testproject/otherlib.js::0": {
+            "ExpressionStatement@test/testproject/otherlib.js::5": {
+                "funcId": "[Unknown]@test/testproject/otherlib.js::0",
+                "statementId": "ExpressionStatement@test/testproject/otherlib.js::5",
+                "type": "ExpressionStatement",
+                "depth": 0,
+                "line": 5,
+                "col": 0,
+                "lineEnd": 5,
+                "colEnd": 32,
+                "executed": true
+            }
+        }
+    },
+    "coverage": 95.45454545454545
+}
