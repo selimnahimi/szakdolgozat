@@ -29,3 +29,7 @@ function addNumbers(args) {
 function emptyFunction() {
 
 }
+
+function notCalledFunction() {
+    console.log("I shouldn't be called!");
+}

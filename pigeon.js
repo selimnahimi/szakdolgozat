@@ -6,6 +6,8 @@ const Visualizer = require('./lib/visualizer/visualizer');
 const Logger = require('./lib/logger');
 const Tracer = require('./lib/tracer');
 const Code = require('./lib/code');
+const JSONHandler = require('./lib/jsonhandler');
+const path = require("path");
 
 /**
  * Az osztály, ami a folyamat elindításáért felelős
@@ -42,6 +44,8 @@ class Pigeon extends EventEmitter {
      */
     inject() {
         this.log(`-- pigeon ${this.version} --`);
+        this.log('kimeneti JSON fájlok létrehozása');
+        JSONHandler.createAllJSONFiles();
         this.log('compile felülírása');
         this.alterCompile();
         this.setupGlobalFunctions();
@@ -55,18 +59,22 @@ class Pigeon extends EventEmitter {
         let original = Module.prototype._compile;
 
         Module.prototype._compile = function(content, filename) {
+            let relativeFilename = path.relative( __dirname, filename ).replaceAll("\\", "/");
+
             // Beágyazás
             let code = new Code(content);
             code.wrap();
 
-            // TODO: Instrumentálás
-            code.source = self.instrument.inject(filename, code);
+            // Instrumentálás
+            code.source = self.instrument.inject(relativeFilename, code);
 
             // Megágyazás
             code.unwrap();
 
             // Eredeti működés megtartása
             original.call(this, code.source, filename);
+
+            JSONHandler.calculateCombinedJSON();
         }
     }
 
